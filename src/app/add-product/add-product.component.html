@@ -1,0 +1,16 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Product name</label>
+            <input type="text" formControlName="name" class="text" placeholder="productName">
+            <div *ngIf="f.name.errors" class="invalid-feedback d-block" >
+                <div *ngIf="f.name.errors.required">*productName is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="price">Product price</label>
+            <input type="number" formControlName="price" class="text" placeholder="product Price">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
