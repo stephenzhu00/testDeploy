@@ -1,1 +1,7 @@
 <p>home works!</p>
+<button (click)="checkData()">
+    click
+</button>
+<div *ngFor="let item of imageList">
+    <img src="{{item.image}}" alt="">
+</div>
